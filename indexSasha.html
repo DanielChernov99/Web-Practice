@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>    
+    <body>
+        <style>
+            .btn {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 10px;
+            width: 255px;
+            height: 50px;
+            border-radius: 10px;
+        }
+        .btn:hover {
+            opacity: 0.6; 
+        }
+        #btnLogin {
+            background-color: #4186ff;
+        }
+        #btnRegister {
+            color: black;
+        }
+
+        .container {
+            margin-top: 5%;
+            margin-left: 40%;
+            margin-right: 40%;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .lbl {
+            text-align: left;
+            font-size: 13px;
+            font-family: Arial;
+        }
+        .inpt {
+            width: 225px;
+            height: 15px;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px;
+        }
+        h1{
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial;
+        }
+        a{
+            text-align: right;
+            display: block;
+        }
+        body{
+            background-color: #f2f2f2;
+        }
+        
+
+
+        </style>
+
+        <div class="container">
+            <h1>Login</h1>
+            <br>
+            <label class="lbl" for="username">Username</label>
+            <br>
+            <input class="inpt" type="text" placeholder="Enter Username" name="username" required>
+            <br>
+            <label class="lbl" for="password">Password</label>
+            <br>
+            <input class="inpt" type="password" placeholder="Enter Password" name="password" required>
+            <br>
+            <button class="btn" id="btnLogin" type="submit">Login</button>
+            <br>
+            <button class="btn" id="btnRegister" type="submit">Register</button>
+            <br>
+            <a href="#">Forgot Password?</a>
+        </div>
+        
+
+
+
+    </body>
+</html>
