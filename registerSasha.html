@@ -1,12 +1,10 @@
 
-<!--Ilya Zeldner-->
 <!DOCTYPE html> 
 <html lang="en"> <head>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Login Page</title> 
+    <title>Register Page</title> 
     <style>
-        /* CSS styles embedded within the <head> */
         body {
             font-family: Arial, sans-serif; /* Sets the default font for the entire body */
             background-color: #f0f0f0; /* Sets the background color of the body to light gray */
@@ -16,19 +14,22 @@
             height: 100vh; /* Sets the body height to 100% of the viewport height */
             margin: 0; /* Removes default margin From the body */
         }
-        .login-container {
+        .register-container {
             background-color: #fff; /* Sets the background color of the login container to white */
             padding: 20px; /* Adds 20 pixels of padding inside the login container */
             border-radius: 8px; /* Rounds the corners of the login container */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the login container */
             width: 300px; /* Sets the width of the login container to 300 pixels */
         }
-        .login-container h2 {
+        .register-container h2 {
+            text-align: center;
             margin-bottom: 20px; /* Adds margin below the h2 heading */
             color: #333; /* Sets the text color of the h2 heading to dark gray */
         }
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
+        .register-container input[type="text"],
+        .register-container input[type="password"],
+        .register-container input[type="email"],
+        .register-container input[type="date"] {
             width: 100%; /* Sets the width of input fields to 100% of the parent container */
             padding: 10px; /* Adds 10 pixels of padding inside the input fields */
             margin: 10px 0; /* Adds 10 pixels of margin above and below the input fields */
@@ -36,7 +37,7 @@
             border-radius: 4px; /* Rounds the corners of the input fields */
             box-sizing: border-box; /* Includes padding and border in the element's total width and height */
         }
-        .login-container button {
+        .register-container button {
             width: 100%; /* Sets the width of buttons to 100% of the parent container */
             padding: 10px; /* Adds 10 pixels of padding inside the buttons */
             border: none; /* Removes the default border from buttons */
@@ -45,42 +46,40 @@
             cursor: pointer; /* Changes the cursor to a pointer on hover */
             transition: background-color 0.3s ease; /* Adds a smooth transition effect for background color changes */
         }
-        .login-container button[type="submit"] {
-            background-color: #007BFF; /* Sets the background color of the submit button to blue */
-            color: #fff; /* Sets the text color of the submit button to white */
-        }
-        .login-container button[type="submit"]:hover {
-            background-color: #0056b3; /* Darkens the background color of the submit button on hover */
-        }
-        .login-container button[type="button"] {
-            background-color: #e0e0e0; /* Sets the background color of the register button to light gray */
-            color: #333; /* Sets the text color of the register button to dark gray */
+        .register-container button[type="button"] {
+            background-color: #007BFF; /* Sets the background color of the register button to light gray */
+            color: hsl(0, 100%, 99%); /* Sets the text color of the register button to dark gray */
             margin-top: 10px; /* Adds margin above the register button */
         }
-        .login-container button[type="button"]:hover {
-            background-color: #d0d0d0; /* Darkens the background color of the register button on hover */
-        }
-        .login-container .forgot-password {
-            display: block; /* Makes the forgot password link a block element */
-            text-align: right; /* Aligns the forgot password link to the right */
+        .register-container .BackToLogin{
+            display: block; 
+            text-align: center; 
             margin-top: 10px; /* Adds margin above the forgot password link */
             color: #007BFF; /* Sets the text color of the forgot password link to blue */
             text-decoration: none; /* Removes the default underline from the link */
+            font-size: 10px;
         }
-        .login-container .forgot-password:hover {
+        .register-container .BackToLogin:hover {
             text-decoration: underline; /* Adds an underline to the link on hover */
+        }
+        label{
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
 <body>
-    <div class="login-container"> 
-        <h2>Login</h2> 
+    <div class="register-container"> 
+        <h2>Register</h2> 
         <form> 
             <input type="text" placeholder="Username" required> 
+            <input type="email" placeholder="Email" required>  
             <input type="password" placeholder="Password" required> 
-            <button type="submit">Login</button> 
+            <input type="password" placeholder="Password again" required>
+            <label for="Bday" >Date of birth </label>
+            <input type="date" placeholder="Birth Date" required> 
             <button type="button" onclick="window.location.href='registerSasha.html'">Register</button> 
-            <a href="#" class="forgot-password">Forgot Password?</a> 
+            <a href="indexSasha.html" class="BackToLogin">Already have account? Login</a> 
         </form>
     </div>
 </body>
