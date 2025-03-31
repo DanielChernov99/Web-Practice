@@ -1,0 +1,35 @@
+#app{
+    position: relative;
+}
+.sidebar{
+    position: fixed; /*לפי הדף*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    z-index: 100; /*כמה זה מקדימה במסך -100 זה אומר תמיד מקדימה במסך */
+    padding: 20px;
+    box-shadow: inset 0px 0px rgba(0,0,0,0.1);
+    overflow: auto; /*זז אוטומטית עם הגדלה והקטנה של הדף*/
+    background-color: #dcdcdc75;
+}
+.content{
+    position: absolute; /* ביחס לדף*/
+    top: 0;
+    right:0;
+    left: 200px; /*מתחיל מאיפה שהטול בר נגמר*/
+    padding:20px;
+}
+.row{
+    margin-left: 20px;
+    margin-bottom:20px;
+}
+.col {
+   display: table-cell;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
